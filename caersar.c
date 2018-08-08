@@ -1,3 +1,7 @@
+/**cs50 credit - week1
+*@author Vuong Nguyen me@vuongnguyen.net
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<cs50.h>
