@@ -1,3 +1,7 @@
+/**cs50 mario - week1
+*@author Vuong Nguyen me@vuongnguyen.net
+*/
+
 #include<stdio.h>
 #include <cs50.h>
 
@@ -11,35 +15,41 @@ int main(void)
 
     height = get_int("Height: ");
 
+    while (height < 0 || height > 23)
+    {
+        printf("It should be non-negative and less than 23\n");
+        height = get_int("Height: ");
+    }
+
     if (height > 0 && height <= 23)
     {
-            for (int i = 0; i < height; i++)
+        for (int i = 0; i < height; i++)
+        {
+            /*print the space first, the number of space depends on the height*/
+            for (int j = 1; j < height - i; j++)
             {
-                /*print the space first, the number of space depends on the height*/
-                for (int j = 1; j < height - i; j++)
-                {
-                    printf(" ");
-                }
-
-                /*print the hash*/
-                for (int k = 0; k <= i; k++)
-                {
-                    printf("#");
-                }
-
-                /*print the middle space == gap*/
-                printf("  ");
-
-                /*print the right hash that depends on the height*/
-
-                for (int l = 0; l <= i; l++)
-                {
-                    printf("#");
-                }
-
-                /*print the new line*/
-                printf("\n");
+                printf(" ");
             }
+
+            /*print the hash*/
+            for (int k = 0; k <= i; k++)
+            {
+                printf("#");
+            }
+
+            /*print the middle space == gap*/
+            printf("  ");
+
+            /*print the right hash that depends on the height*/
+
+            for (int l = 0; l <= i; l++)
+            {
+                printf("#");
+            }
+
+            /*print the new line*/
+            printf("\n");
+        }
     }
 
 }
